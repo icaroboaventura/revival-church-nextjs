@@ -2,6 +2,15 @@
 
 @plugin "daisyui";
 
+/* Custom font families */
+.font-inter {
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+.font-playfair {
+    font-family: var(--font-playfair), Georgia, serif;
+}
+
 @plugin "daisyui" {
     themes: revival --default;
 }
@@ -31,9 +40,9 @@
     --color-warning-content: #2b0b00;
     --color-error: oklch(70% 0.191 22.216);
     --color-error-content: #2b0b00;
-    --radius-selector: 0.5rem;
-    --radius-field: 0.5rem;
-    --radius-box: 0.5rem;
+    --radius-selector: 8px;
+    --radius-field: 8px;
+    --radius-box: 8px;
     --size-selector: 0.28125rem;
     --size-field: 0.21875rem;
     --border: 0.5px;

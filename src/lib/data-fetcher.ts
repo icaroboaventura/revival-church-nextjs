@@ -1,5 +1,5 @@
 import pb from "@/lib/pocketbase";
-import { Collections } from "@/lib/pocketbase-types";
+import { Collections } from "../../pocketbase-types";
 
 /**
  * Generic data fetcher for PocketBase collections
@@ -11,7 +11,7 @@ import { Collections } from "@/lib/pocketbase-types";
 export const fetchCollectionData = async <T>(
   collection: Collections,
   page: number = 1,
-  perPage: number = 1
+  perPage: number = 1,
 ): Promise<T | null> => {
   try {
     const data = await pb.collection(collection).getList(page, perPage, {
@@ -29,9 +29,7 @@ export const fetchCollectionData = async <T>(
  * @param collection - The collection name to fetch from
  * @returns All items from the collection or empty array if error
  */
-export const fetchAllCollectionData = async <T>(
-  collection: Collections
-): Promise<T[]> => {
+export const fetchAllCollectionData = async <T>(collection: Collections): Promise<T[]> => {
   try {
     const data = await pb.collection(collection).getFullList({
       requestKey: null, // Disable auto-cancellation

@@ -1,5 +1,5 @@
-const GivePage = () => {
-  return <div></div>;
+const ShopPage = () => {
+  return <div className={"h-svh"}></div>;
 };
 
-export default GivePage;
+export default ShopPage;
